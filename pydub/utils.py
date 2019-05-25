@@ -276,7 +276,8 @@ def mediainfo_json(filepath, read_ahead_limit=-1):
     output = output.decode("utf-8", 'ignore')
     stderr = stderr.decode("utf-8", 'ignore')
 
-    info = json.loads(output)
+    #info = json.loads(output)
+    info = None
 
     if not info:
         # If ffprobe didn't give any information, just return it
